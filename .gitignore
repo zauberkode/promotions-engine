@@ -26,3 +26,7 @@
 ###> IDE  ###
 /.idea
 ###< IDE  ###
+
+###> docker  ###
+mysql
+###< docker  ###
