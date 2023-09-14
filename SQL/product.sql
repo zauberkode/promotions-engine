@@ -1,0 +1,1 @@
+insert into `product` (`id`,`price`) values (1, 100), (2, 200);
