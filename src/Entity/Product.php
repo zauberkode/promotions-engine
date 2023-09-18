@@ -18,13 +18,13 @@ class Product
     #[ORM\Column]
     private ?int $price = null;
 
-    #[ORM\OneToMany(mappedBy: 'product', targetEntity: ProductPromotion::class)]
-    private Collection $productPromotions;
-
-    public function __construct()
-    {
-        $this->productPromotions = new ArrayCollection();
-    }
+//    #[ORM\OneToMany(mappedBy: 'product', targetEntity: ProductPromotion::class)]
+//    private Collection $productPromotions;
+//
+//    public function __construct()
+//    {
+//        $this->productPromotions = new ArrayCollection();
+//    }
 
     public function getId(): ?int
     {
@@ -46,6 +46,7 @@ class Product
     /**
      * @return Collection<int, ProductPromotion>
      */
+    /*
     public function getProductPromotions(): Collection
     {
         return $this->productPromotions;
@@ -72,4 +73,5 @@ class Product
 
         return $this;
     }
+    */
 }
