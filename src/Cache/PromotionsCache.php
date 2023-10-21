@@ -22,7 +22,6 @@ class PromotionsCache
         return $this->cache->get($key, function (ItemInterface $item)
         use ($product, $requestDate) {
             $item->expiresAfter(33600);
-
             return $this->repository->findValidForProduct(
                 $product,
                 date_create_immutable($requestDate)
