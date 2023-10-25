@@ -23,7 +23,7 @@ class ServiceExceptionData
     public function toArray(): array
     {
         return [
-            'type' => 'ConstraintViolationsList',
+            'type' => $this->getType(),
         ];
     }
 

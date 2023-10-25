@@ -19,8 +19,6 @@ class DtoSubscriberTest extends ServiceTestCase
 
     }
 
-
-
     public function testValidateDto():void {
         $dto = new LowestPriceEnquiry();
         $dto->setQuantity(-5);
@@ -30,7 +28,7 @@ class DtoSubscriberTest extends ServiceTestCase
         $eventDispatcher = $this->container->get('debug.event_dispatcher');
 
         $this->expectException(ServiceException::class);
-        $this->expectExceptionMessage('Validation Failed');
+        $this->expectExceptionMessage('ConstraintViolationList');
 
         $eventDispatcher = $eventDispatcher->dispatch($event,$event::NAME);
     }
